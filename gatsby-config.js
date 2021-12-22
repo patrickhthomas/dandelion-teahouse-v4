@@ -2,9 +2,9 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    siteTitle: "gatsby-starter-shopify",
-    siteTitleDefault: "gatsby-starter-shopify by @GatsbyJS",
-    siteUrl: "https://shopify-demo.gatsbyjs.com",
+    siteTitle: "dandelion-teahouse-apothecary",
+    siteTitleDefault: "Dandelion Teahouse and Apothecary online store by Product Pat Design",
+    siteUrl: "https://dandelionteahouse.com",
     hrefLang: "en",
     siteDescription:
       "A Gatsby starter using the latest Shopify plugin showcasing a store with product overview, individual product pages, and a cart.",
@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: "gatsby-source-shopify",
       options: {
-        password: process.env.SHOPIFY_SHOP_PASSWORD,
-        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
+        password: "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",
+        storeUrl: "dandelion-teahouse-apothecary.myshopify.com",
         shopifyConnections: ["collections"],
       },
     },
