@@ -1,23 +1,64 @@
+@font-face {
+  font-family: "Sonder-Sans";
+  src: url("../fonts/SonderSans-Rough.woff2");
+}
+
+@font-face {
+  font-family: "Sonder-Sans-Bold";
+  src: url("../fonts/SonderSans-BoldRough.woff2");
+}
+
+@font-face {
+  font-family: "Sonder-Sans-Black";
+  src: url("../fonts/SonderSans-BlackRough.woff2");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Quicksand-Bold";
+  src: url("../fonts/Quicksand-Bold.ttf");
+}
+
 :root {
   /* tokens */
   /* font-family */
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-body: "Quicksand",
+  -apple-system, 
+  BlinkMacSystemFont, 
+  "Segoe UI", Helvetica, 
+  Arial, 
+  sans-serif, 
+  "Apple Color Emoji", 
+  "Segoe UI Emoji", 
+  "Segoe UI Symbol";
 
+  --font-h1: "Sonder-Sans-Black";
+  --font-h2: "Sonder-Sans-Bold";
+  --font-h3: "Sonder-Sans";
   /* palette */
-  --black-fade-5: rgba(0, 0, 0, 0.05);
-  --black-fade-40: rgba(0, 0, 0, 0.4);
-  --grey-90: #232129;
-  --grey-50: #78757a;
-  --green-80: #088413;
-  --green-50-rgb: 55, 182, 53;
   --white: #ffffff;
+  --purple: #30174F;
+  --yellow: #FFD13A;
+  --green: #2F9E44;
+  --red: #B91E23;
+  --off-white-purple: #F1EBF9;
+  --off-black: #0E0718;
+  --off-white-grey: #F2F2F3;
+  --purple-highlight: #7136BA;
+  --purple-highlight-25: rgba(113, 54, 186, 0.25);
+  --purple-highlight-05: rgba(113, 54, 186, 0.05);
+  --purple-highlight-01: rgba(113, 54, 186, 0.01);
 
+  
   /* radii */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-rounded: 999px;
-
+  
   /* spacing */
   --space-sm: 4px;
   --space-md: 8px;
@@ -25,69 +66,70 @@
   --space-xl: 20px;
   --space-2xl: 24px;
   --space-3xl: 48px;
-
+  
   /* line-height */
   --solid: 1;
   --dense: 1.25;
   --default: 1.5;
   --loose: 2;
-
+  
   /* letter-spacing */
   --tracked: 0.075em;
   --tight: -0.015em;
-
+  
   /* font-weight */
   --body: 400;
   --medium: 500;
   --semibold: 600;
   --bold: 700;
-
+  --x-bold: 900;
+  
   /* font-size */
   --text-xs: 12px;
   --text-sm: 14px;
   --text-md: 16px;
   --text-lg: 18px;
-  --text-xl: 20px;
-  --text-2xl: 24px;
-  --text-3xl: 32px;
-
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 48px;
+  
   /* role-based tokens */
-
+  
   /* colors */
-  --primary: var(--green-80);
+  --primary: var(--green);
   --background: var(--white);
-  --border: var(--black-fade-5);
-
+  --border: var(--purple-highlight-05);
+  
   /* transitions */
   --transition: box-shadow 0.125s ease-in;
-
+  
   /* shadows */
   --shadow: 0 4px 12px rgba(var(--green-50-rgb), 0.5);
-
+  
   /* text */
   /* color */
-  --text-color: var(--grey-90);
-  --text-color-secondary: var(--grey-50);
-  --text-color-inverted: var(--white);
+  --text-color: var(--off-black);
+  --text-color-secondary: var(--purple);
+  --text-color-inverted: var(--off-white-purple);
   /* size */
-  --text-display: var(--text-2xl);
+  --text-display: var(--text-3xl);
   --text-prose: var(--text-md);
-
+  
   /* input */
-  --input-background: var(--black-fade-5);
-  --input-background-hover: var(--black-fade-5);
-  --input-border: var(--black-fade-5);
+  --input-background: var(--purple-highlight-05);
+  --input-background-hover: var(--purple-highlight-05);
+  --input-border: var(--purple-highlight-25);
   --input-text: var(--text-color);
-  --input-text-disabled: var(--black-fade-40);
+  --input-text-disabled: var(--purple-highlight-05);
   --input-ui: var(--text-color-secondary);
   --input-ui-active: (--text-color);
-
+  
   /* size */
   --size-input: var(--space-3xl);
   --size-gap: 12px;
   --size-gutter-raw: var(--space-2xl);
   --size-gutter: calc(var(--size-gutter-raw) - 12px);
-
+  
   /* product */
   --product-grid: 1fr;
 }

@@ -3,6 +3,22 @@ body {
   color: var(--text-color);
 }
 
+h1 {
+  font-family: var(--font-h1);
+  font-weight: var(--bold);
+}
+
+h2 {
+  font-family: var(--font-h2);
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-family: var(--font-h3);
+  font-size: var(--text-xl);
+}
+
+
 .gatsby-image-wrapper {
   margin: auto;
 }

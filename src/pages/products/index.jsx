@@ -9,8 +9,8 @@ import { title } from "./index.module.css"
 export default function Products({ data: { products } }) {
   return (
     <Layout>
-      <Seo title="All Products" />
-      <h1 className={title}>Products</h1>
+      <Seo title="Shop Online" />
+      <h1 className={title}>Shop Online</h1>
       <ProductListing products={products.nodes} />
       {products.pageInfo.hasNextPage && (
         <MoreButton to={`/search#more`}>More products</MoreButton>

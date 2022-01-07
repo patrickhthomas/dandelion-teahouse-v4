@@ -19,6 +19,7 @@ export function Footer() {
         </div>
         <strong>gatsby-starter-shopify</strong> change this by editing{" "}
         <code>src/components/footer.jsx</code>
+        <h1>HUH</h1>
       </div>
       <nav className={links} aria-label="footer">
         <ul className={footerNavList}>

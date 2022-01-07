@@ -1,0 +1,36 @@
+.collectionCardStyle {
+  max-width: 400px;
+  cursor: pointer;
+  text-decoration: none;
+  padding-bottom: var(--space-md);
+}
+
+.collectionImageStyle {
+  margin-bottom: var(--space-md);
+}
+
+.collectionDetailsStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  font-weight: var(--semibold);
+}
+
+.collectionVendorStyle {
+  font-size: var(--text-sm);
+  color: var(--text-color-secondary);
+}
+
+.collectionHeadingStyle {
+  width: 100%;
+  font-size: var(--text-lg);
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: var(--dense);
+}
+
+.collectionPrice {
+  color: var(--text-color-secondary);
+}
