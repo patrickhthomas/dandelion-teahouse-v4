@@ -11,6 +11,12 @@
 
 .title {
     font-size: 36px;
+    align-self: center;
+}
+
+.wordmark {
+    width: 420px;
+    align-self: center;
 }
 
 .hero {
