@@ -1,5 +1,5 @@
 
-.container {
+.heroContainer {
     display: flex;
     flex-flow: column;
     align-items: start;
@@ -9,16 +9,30 @@
 
 }
 
+.container {
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        z-index: 1;
+        top: 0;
+        padding: 0 var(--size-gutter-raw);
+}
+
 .title {
     font-size: 36px;
-    align-self: center;
+    align-self: start;
 }
 
-.wordmark {
-    width: 420px;
-    align-self: center;
+.wordmarkContainer {
+    width: 100%;
+    max-width: 420px;
+    align-self: start;
 }
 
+.heroBlurb {
+    width: 100%;
+    max-width: 650px;
+}
 .hero {
     display: grid;
     width: 100%;
