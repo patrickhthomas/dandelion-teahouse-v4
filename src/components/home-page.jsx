@@ -7,6 +7,7 @@ import { Navigation } from "./navigation"
 import Wordmark from "../images/dandelion-wordmark"
 import { CartButton } from "./cart-button"
 import { HoursLocation } from "./hours-and-location"
+import { ContactCard } from "./contact-card"
 import {
   hero,
   intro,
@@ -44,6 +45,7 @@ export function HomePage() {
     </div>
     <div className={container}>
       <HoursLocation />
+      <ContactCard />
     </div>
     </>
 

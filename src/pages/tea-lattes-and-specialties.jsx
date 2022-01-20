@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Hero } from "../components/hero"
 import { Layout } from "../components/layout"
 import { ProductListing } from "../components/product-listing"
 import {
@@ -11,28 +12,21 @@ import {
 export const query = graphql`
   query {
     shopifyCollection(handle: { eq: "1tea-drinks" }) {
+      title
+      description
       products {
         ...ProductCard
       }
     }
   }
 `
-function Hero (props) {
-  return (
-    <div className={container}>
-      <h1 className={intro}>Dandelion Teahouse & Apothecary</h1>
-      <h2 className={tagline}>Where all your wishes come true!</h2>
-      <h3>headline 3 baby</h3>
-      <p>Paragraphs text</p>
-      <caption>captionsdfg</caption>
-    </div>
-  )
-}
+
 
 export default function TeaDrinksPage({ data }) {
+
   return (
     <Layout>
-      <Hero />
+      <Hero title={data.shopifyCollection.title} description={data.shopifyCollection.description}/>
       <ProductListing products={data?.shopifyCollection?.products} />
     </Layout>
   )

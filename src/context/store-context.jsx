@@ -4,8 +4,8 @@ import Client from "shopify-buy"
 
 const client = Client.buildClient(
   {
-    domain: process.env.GATSBY_SHOPIFY_STORE_URL,
-    storefrontAccessToken: process.env.GATSBY_STOREFRONT_ACCESS_TOKEN,
+    domain: "https://dandelion-teahouse-apothecary.myshopify.com",
+    storefrontAccessToken: "c0dc6a512f5f2d61d44afbd6bbc8915b",
   },
   fetch
 )

@@ -26,14 +26,6 @@ export function Navigation({ className }) {
     >
     Home
     </Link>
-    <Link
-    key="All"
-    className={navLink}
-    to="/products/"
-    activeClassName={activeLink}
-    >
-    All products
-    </Link>
     {collections.map((title) => (
       <Link
       key={title}

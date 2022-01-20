@@ -3,6 +3,7 @@ import queryString from "query-string"
 import { useQuery } from "urql"
 import { ProductsQuery, createQuery } from './search'
 
+
 function makeQueryStringValue(allItems, selectedItems) {
   if (allItems.length === selectedItems.length) {
     return []
