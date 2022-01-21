@@ -10,22 +10,24 @@
 }
 
 .container {
-        display: flex;
-        flex-flow: column;
+        display: grid;
+        grid-auto-rows: auto;
         align-items: start;
+        grid-gap: 2em;
         z-index: 1;
         top: 0;
-        padding: 0 var(--size-gutter-raw);
 }
 
 .title {
     font-size: 36px;
     align-self: start;
+    line-height: 40px;
 }
 
 .wordmarkContainer {
     width: 100%;
     max-width: 420px;
+    padding-bottom: 1em;
     align-self: start;
 }
 
@@ -41,6 +43,58 @@
     grid-template-areas: "logo nada searchButton cartButton""navHeader navHeader navHeader navHeader";
     align-items: center;
     background-color: var(--background);
+}
+
+.hoursContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+}
+
+.locationContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+}
+
+.locationHoursFlexbox {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-gap: 1em;
+    align-items: start;
+    z-index: 1;
+    width: 100%;
+}
+
+.locationHoursContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-gap: 1em;
+    align-items: start;
+    z-index: 1;
+    padding: 0 var(--size-gutter-raw);
+    width: 100%;
+}
+
+.dandelionMap {
+    width: 100%;
+    max-width: 420px;
+}
+
+.hoursRow {
+        display: flex;
+        padding-bottom: .5em;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+        
+
 }
 
 .header::after {
@@ -60,6 +114,10 @@
     .header {
         grid-template-areas: "logo navHeader searchButton cartButton";
     }
+    .locationHoursFlexbox {
+        flex-flow: row nowrap;
+    }
+    
 }
 
 .logo {
