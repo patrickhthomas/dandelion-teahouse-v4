@@ -86,13 +86,7 @@ export function Filters({
         setSelectedItems={(value) => updateFilter("vendors", value)}
       />
       <hr />
-      <CheckFilter
-        open={true}
-        name="Tags"
-        items={tags}
-        selectedItems={filters.tags}
-        setSelectedItems={(value) => updateFilter("tags", value)}
-      />
+
     </>
   )
 }

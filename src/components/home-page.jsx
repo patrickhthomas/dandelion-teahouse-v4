@@ -43,7 +43,6 @@ export function HomePage() {
       <caption>caption text</caption>
     </div>
     <div className={container}>
-      <HoursLocation />
     </div>
     </>
 

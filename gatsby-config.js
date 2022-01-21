@@ -1,4 +1,6 @@
-require("dotenv").config()
+require("dotenv").config({
+ path: `.env`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -18,8 +20,8 @@ module.exports = {
     {
       resolve: "gatsby-source-shopify",
       options: {
-        password: "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",
-        storeUrl: "dandelion-teahouse-apothecary.myshopify.com",
+        password: process.env.SHOPIFY_SHOP_PASSWORD,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
         shopifyConnections: ["collections"],
       },
     },

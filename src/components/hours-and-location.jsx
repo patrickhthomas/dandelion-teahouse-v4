@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Clock from '../components/Icons/clock'
-import Pin from '../components/Icons/pin'
+
 
 import {
   wrapper,
@@ -16,6 +15,9 @@ import {
   logo as logoCss,
   searchButton,
   nav,
+  hours,
+  day,
+  address,
 } from "./hours-and-location.module.css"
 
 
