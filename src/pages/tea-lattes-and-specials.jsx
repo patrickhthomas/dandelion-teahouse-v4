@@ -9,8 +9,8 @@ import {
 } from "./index.module.css"
 
 export const query = graphql`
-  query {
-    shopifyCollection(handle: { eq: "6gifts" }) {
+query {
+  shopifyCollection(handle: { eq: "1tea-drinks" }) {
       products {
         ...ProductCard
       }
@@ -20,16 +20,16 @@ export const query = graphql`
   }
 `
 
-
-export default function GiftsPage({ data }) {
+export default function TeaDrinksPage({ data }) {
   return (
     <Layout>
-                      <div className={container}>
+          <div className={container}>
     <h3>Dandelion Teahouse &#38; Apothecary</h3>
     <h1 className={intro}>{data?.shopifyCollection?.title}</h1>
     <p>{data?.shopifyCollection?.description}</p>
     </div>
-      <ProductListing products={data?.shopifyCollection?.products} />
+    <ProductListing products={data?.shopifyCollection?.products} />
     </Layout>
-  )
-}
+    )
+  }
+  

@@ -1,16 +1,27 @@
 
 .heroContainer {
+    grid-area: a;
     display: flex;
     flex-flow: column;
-    align-items: start;
     z-index: 1;
     top: 0;
     padding: 0 var(--size-gutter-raw);
-
+    overflow: hidden;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0) 100%),
+    url('../images/heroBG.jpg');
+    background-size: cover;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .container {
         display: grid;
+        grid-template-areas: 
+        'a'
+        'b'
+        'c'
+        'd'
+        'e';
         grid-auto-rows: auto;
         align-items: start;
         grid-gap: 2em;
@@ -19,31 +30,63 @@
 }
 
 .title {
-    font-size: 36px;
-    align-self: start;
-    line-height: 40px;
+  text-align: center;
+  font-size: 12vw;
+  line-height: 12vw;
+  z-index: 1;
 }
+
+
 
 .wordmarkContainer {
     width: 100%;
     max-width: 420px;
     padding-bottom: 1em;
-    align-self: start;
+    align-self: center;
+      z-index: 1;
+}
+
+
+.blurbContainer {
+    display: flex;
+    flex-flow: column;
+    z-index: 1;
+    top: 0;
+    padding: 0 var(--size-gutter-raw);
 }
 
 .heroBlurb {
     width: 100%;
-    max-width: 650px;
+    z-index: 1;
 }
-.hero {
-    display: grid;
+
+.iconContainer {
     width: 100%;
-    padding: var(--size-gap) var(--size-gutter);
-    grid-template-columns: var(--size-input) 1fr min-content min-content;
-    grid-template-areas: "logo nada searchButton cartButton""navHeader navHeader navHeader navHeader";
-    align-items: center;
-    background-color: var(--background);
+    max-width: 420px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 2em;
 }
+
+.iconB {
+    width: 20vw;
+    max-width: 144px;
+    padding-left: 2em;
+}
+.iconC {
+    width: 20vw;
+    max-width: 144px;
+    padding-right: 2em;
+
+}
+
+
+.tagline {
+    align-self: center;
+      z-index: 1;
+}
+
 
 .hoursContainer {
     display: flex;
@@ -117,8 +160,42 @@
     .locationHoursFlexbox {
         flex-flow: row nowrap;
     }
+    .title {
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+
+    .heroBlurb {
+        align-self: start;
+    }
     
 }
+
+@media (min-width: 800px) {
+    .title {
+        font-size: 60px;
+        line-height: 60px;
+        max-width: 640px;
+        margin: auto;
+    }
+    .wordmarkContainer {
+        max-width: 800px;
+    }
+    .heroBlurb {
+        max-width: 800px;
+    }
+    .blurbContainer {
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+
+
+}
+
 
 .logo {
     display: flex;

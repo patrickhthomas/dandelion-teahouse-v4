@@ -14,25 +14,21 @@ export const query = graphql`
       products {
         ...ProductCard
       }
+      description
+      title
     }
   }
 `
-function Hero (props) {
-  return (
-    <div className={container}>
-      <h1 className={intro}>Dandelion Teahouse & Apothecary</h1>
-      <h2 className={tagline}>Where all your wishes come true!</h2>
-      <h3>headline 3 baby</h3>
-      <p>Paragraphs text</p>
-      <caption>captionsdfg</caption>
-    </div>
-  )
-}
+
 
 export default function HerbsPage({ data }) {
   return (
     <Layout>
-      <Hero />
+                      <div className={container}>
+    <h3>Dandelion Teahouse &#38; Apothecary</h3>
+    <h1 className={intro}>{data?.shopifyCollection?.title}</h1>
+    <p>{data?.shopifyCollection?.description}</p>
+    </div>
       <ProductListing products={data?.shopifyCollection?.products} />
     </Layout>
   )

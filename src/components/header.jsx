@@ -9,7 +9,7 @@ import { Toast } from "./toast"
 import {
   header,
   container,
-  logo as logoCss,
+  logo,
   searchButton,
   nav,
 } from "./header.module.css"
@@ -26,8 +26,8 @@ export function Header() {
   return (
     <div className={container}>
       <header className={header}>
-        <Link to="/" className={logoCss}>
-          <Logo />
+        <Link to="/">
+          <Logo className={logo}/>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>

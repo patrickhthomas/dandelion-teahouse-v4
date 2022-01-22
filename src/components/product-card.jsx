@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { getShopifyImage } from "gatsby-source-shopify"
 import { formatPrice } from "../utils/format-price"
 import {
@@ -62,7 +63,13 @@ export function ProductCard({ product, eager }) {
             />
           </div>
         ) : (
-          <div style={{ height: defaultImageHeight, width: defaultImageWidth }} />
+          <div className={productImageStyle} data-name="product-image-box">
+            <StaticImage
+              alt='image coming soon'
+              src='../images/imageComingSoon.webp'
+              loading={eager ? "eager" : "lazy"}
+            />
+          </div>
         )
       }
       <div className={productDetailsStyle}>

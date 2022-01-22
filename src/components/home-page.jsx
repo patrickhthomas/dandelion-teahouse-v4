@@ -5,12 +5,15 @@ import { StoreContext } from "../context/store-context"
 import Logo from "../icons/logo"
 import { Navigation } from "./navigation"
 import Wordmark from "../images/dandelion-wordmark"
+import InclusiveCompany from "../images/inclusive-company"
+import WomanOwned from "../images/woman-owned"
 import DandelionMap from "../images/dandelion-map"
-import { CartButton } from "./cart-button"
-import { HoursLocation } from "./hours-and-location"
+import { StaticImage } from "gatsby-plugin-image"
+
 import {
   hero,
-  intro,
+  iconB,
+  iconC,
   title,
   tagline,
   wordmark,
@@ -24,10 +27,13 @@ import {
   locationHoursContainer,
   locationHoursFlexbox,
   dandelionMap,
+  blurbContainer,
+  iconContainer,
   logo as logoCss,
   searchButton,
   nav,
 } from "./home-page.module.css"
+
 
 export function HomePage() {
   const { checkout, loading, didJustAddToCart } = React.useContext(StoreContext)
@@ -44,10 +50,15 @@ export function HomePage() {
         <div className={wordmarkContainer}>
           <Wordmark className={wordmark}/>
         </div>
-        <h1 className={title}> Teahouse & Apothecary</h1>
+        <h1 className={title}> Teahouse &#38; Apothecary</h1>
         <h3 className={tagline}>Where all your wishes come true!</h3>
-        <p className={heroBlurb}>We are a modern apothecary and teahouse located in downtown Vancouver, WA. Our shop features unique teas from all over the world, tea lattes, handcrafted herbal tisane blends, loose herbs, natural small batch skincare products made on-site by Gifts From the Earth, a rotating selection of art by local artists, and so much more. We are proud to be a women owned, inclusive company!</p>
-        <caption>caption text</caption>
+        
+      </div>
+      <div className={blurbContainer}>
+      <p className={heroBlurb}>We are a modern apothecary and teahouse located in downtown Vancouver, WA. Our shop features unique teas from all over the world, tea lattes, handcrafted herbal tisane blends, loose herbs, natural small batch skincare products made on-site by Gifts From the Earth, a rotating selection of art by local artists, and so much more. We are proud to be a women owned, inclusive company!</p>
+      <div className={iconContainer}>
+        <WomanOwned className={iconB}/> <InclusiveCompany className={iconC}/>
+      </div>
       </div>
       <div className={locationHoursContainer}>
         <h2>Hours &#38; Location</h2>
