@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+}
+
+.primaryButton {
+  color: var(--text-color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  align-self: center;
+  background-color: var(--primary);
+  margin: auto;
+}
+
+.strong {
+  padding: 2em;
+}
+
+.primaryButton:hover {
+  color: var(--text-color);
+}
+
+
+
