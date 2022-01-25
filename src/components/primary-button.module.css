@@ -3,14 +3,21 @@
 }
 
 .primaryButton {
-  color: var(--text-color-secondary);
+  border: 2px solid var(--primary);
+  background-color: var(--off-white-purple);
+  color: var(--text-color);
+  cursor: pointer;
+  text-decoration: none;
+  height: var(--size-input);
+  border-radius: var(--radius-sm);
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  align-self: center;
-  background-color: var(--primary);
-  margin: auto;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+  font-weight: var(--bold);
+  margin-left: var(--space-lg);
+  transition: all .35s;
+box-shadow: 0px 0px 5px rgba(113, 54, 186, 0.3);
 }
 
 .strong {
@@ -18,8 +25,38 @@
 }
 
 .primaryButton:hover {
-  color: var(--text-color);
+  background-color: var(--yellow);
+  color: var(--purple);
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  transition: all .35s;
 }
 
+
+.wishBox {
+  border: 2px solid var(--primary);
+  background-color: var(--off-white-purple);
+  color: var(--text-color);
+  cursor: pointer;
+  text-decoration: none;
+  height: var(--size-input);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+  font-weight: var(--bold);
+  margin-left: var(--space-lg);
+  transition: all .35s;
+}
+
+.wishBox:hover {
+  background-color: var(--yellow);
+  color: var(--purple);
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  transition: all .35s;
+
+}
 
 

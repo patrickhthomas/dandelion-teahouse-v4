@@ -3,7 +3,7 @@
   padding-right: var(--size-gutter-raw);
   padding-top: var(--space-lg);
   padding-bottom: var(--space-3xl);
-  max-width: 76ch;
+  max-width: 100%;
 }
 
 .intro {
@@ -36,4 +36,50 @@
 
 .deployButton {
   margin-top: var(--space-lg);
+}
+
+
+.collapsible {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.closed {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+}
+
+.closed h2 {
+  width: 100%;
+}
+
+.internalTrigger {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.internalTrigger h2 {
+  font-size: var(--text-lg);
+}
+
+.triggerOpen {
+  transform: rotate(90);
+}
+
+.contentInner {
+  display: grid;
+  grid-gap: 1em;
+}
+
+.lineBreak {
+  border-top: none;
+  height: .2em;
+  background: var(--rainbow);
+}
+
+.collapseContainer {
+  padding-top: 1em;
 }

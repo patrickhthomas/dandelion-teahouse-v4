@@ -99,6 +99,7 @@
   --primary: var(--green);
   --background: var(--white);
   --border: var(--purple-highlight-05);
+  --rainbow: linear-gradient(90deg, #B91E23 0%, #B91E23 16.65%, #DB742E 16.66%, #DB742E 33.31%, #FFD13A 33.32%, #FFD13A 49.99%, #2F9E44 50%, #2F9E44 66.65%, #002A73 66.66%, #002A73 83.43%, #30174F 83.44%);
   
   /* transitions */
   --transition: box-shadow 0.125s ease-in;

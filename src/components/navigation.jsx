@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby"
 import * as React from "react"
 import slugify from "@sindresorhus/slugify"
-import { navStyle, navLink, activeLink } from "./navigation.module.css"
+import { navStyle, navLink, activeLink, wishBox, activeWishBox } from "./navigation.module.css"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export function Navigation({ className }) {
@@ -28,6 +28,7 @@ export function Navigation({ className }) {
     Home
     </Link>
     {collections.map((title) => (
+    title == 'Teas' || title == 'Skincare' || title == 'Tea Lattes and Specials' || title == 'Herbs' || title == 'Gifts' ?
       <Link
       key={title}
       className={navLink}
@@ -36,6 +37,18 @@ export function Navigation({ className }) {
       >
       {title}
       </Link>
+      : 
+      title == 'Wish Box' ?
+      <Link
+      key={title}
+      className={wishBox}
+      to={`/${slugify(title)}`}
+      activeClassName={activeWishBox}
+      >
+      {title}
+      </Link>
+      :
+      <></>
       ))}
       </nav>
       )

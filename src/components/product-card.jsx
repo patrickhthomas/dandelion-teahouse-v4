@@ -21,6 +21,7 @@ export function ProductCard({ product, eager }) {
     images: [firstImage],
     vendor,
     storefrontImages,
+    description,
   } = product
 
   const price = formatPrice(
@@ -46,7 +47,7 @@ export function ProductCard({ product, eager }) {
   }
 
   const hasImage = firstImage || Object.getOwnPropertyNames(storefrontImageData || {}).length
-
+  const descStr = description.slice(0, 64) + '...';
   return (
     <Link
       className={productCardStyle}
@@ -73,10 +74,10 @@ export function ProductCard({ product, eager }) {
         )
       }
       <div className={productDetailsStyle}>
-        <div className={productVendorStyle}>{vendor}</div>
         <h2 as="h2" className={productHeadingStyle}>
           {title}
         </h2>
+        <div className={productVendorStyle}>{descStr}</div>
         <div className={productPrice}>{price}</div>
       </div>
     </Link>
@@ -102,5 +103,7 @@ export const query = graphql`
       }
     }
     vendor
+    productType
+    description
   }
 `

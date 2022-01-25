@@ -18,19 +18,55 @@
   padding-right: var(--space-md);
 }
 
-.navLink:hover {
+.wishBox {
+  border: 2px solid var(--primary);
+  background-color: var(--off-white-purple);
   color: var(--text-color);
+  cursor: pointer;
+  text-decoration: none;
+  height: var(--size-input);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+  font-weight: var(--bold);
+  margin-left: var(--space-lg);
+  transition: all .35s;
+}
+
+.wishBox:hover {
+  background-color: var(--yellow);
+  color: var(--purple);
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  transition: all .35s;
+
+}
+
+.navLink:hover {
+  color: var(--primary);
 }
 
 .activeLink,
 .navLink[aria-active="page"] {
+  background-color: var(--white);
   color: var(--primary);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
+  font-weight: var(--bold);
+}
+
+.activeWishBox,
+.wishBox[aria-active="page"] {
+  border: 2px solid var(--primary);
+    background-color: var(--off-white-purple);
+    color: var(--text-color);
 }
 
 .activeLink:hover,
-.navLink[aria-active="page"]:hover {
+.navLink[aria-active="page"]:hover,
+.wishBox[aria-active="page"]:hover {
   color: var(--primary);
 }

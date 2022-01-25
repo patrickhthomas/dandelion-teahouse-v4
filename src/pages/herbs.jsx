@@ -6,7 +6,8 @@ import {
   container,
   intro,
   tagline,
-} from "./index.module.css"
+  herbProduct,
+} from "./herbs.module.css"
 
 export const query = graphql`
   query {
@@ -29,7 +30,7 @@ export default function HerbsPage({ data }) {
     <h1 className={intro}>{data?.shopifyCollection?.title}</h1>
     <p>{data?.shopifyCollection?.description}</p>
     </div>
-      <ProductListing products={data?.shopifyCollection?.products} />
+      <ProductListing className={herbProduct} products={data?.shopifyCollection?.products} />
     </Layout>
   )
 }
