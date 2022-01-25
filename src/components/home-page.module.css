@@ -113,6 +113,7 @@
     align-items: start;
     z-index: 1;
     width: 100%;
+    padding-bottom: 1em;
 }
 
 .locationHoursContainer {
@@ -186,6 +187,38 @@
         align-self: start;
     }
     
+.aboutContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-gap: 1em;
+    align-items: start;
+    z-index: 1;
+    padding: 0 var(--size-gutter-raw);
+    width: 95%;
+    margin: auto;
+    background: var(--off-white-grey);
+    border-radius: 1em;
+}
+.locationHoursContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-gap: 1em;
+    align-items: start;
+    z-index: 1;
+    padding: 0 var(--size-gutter-raw);
+    width: 95%;
+    margin: auto;
+    background: var(--off-white-grey);
+    border-radius: 1em;
+}
+
+.offerSection {
+    padding-bottom: 1em;
+}
+
+h2 {
+    padding-top: 1em;
+}
 }
 
 @media (min-width: 800px) {
@@ -215,6 +248,7 @@
             "b c";
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto auto;
+        grid-gap: 1em;
     }
 
  .offerSection h3 {
