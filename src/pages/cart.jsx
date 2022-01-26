@@ -40,7 +40,7 @@ export default function CartPage() {
               sometimes it’s hard to choose — maybe this helps:
             </p>
             <Link to="/search?s=BEST_SELLING" className={emptyStateLink}>
-              View trending products
+              See some of our best sellers
             </Link>
           </div>
         ) : (

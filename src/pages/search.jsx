@@ -8,7 +8,7 @@ import CrossIcon from "../icons/cross"
 import SortIcon from "../icons/sort"
 import FilterIcon from "../icons/filter"
 import SearchIcon from "../icons/search"
-import { ProductCard } from "../components/product-card"
+import { ProductCardSearch } from "../components/product-card-search"
 import { useProductSearch } from "../utils/hooks"
 import { getValuesFromQuery } from "../utils/search"
 import { getCurrencySymbol } from "../utils/format-price"
@@ -228,7 +228,7 @@ function SearchPage({
             <ul className={productListStyle}>
               {products.map(({ node }, index) => (
                 <li className={productListItem} key={node.id}>
-                  <ProductCard
+                  <ProductCardSearch
                     eager={index === 0}
                     product={{
                       title: node.title,
