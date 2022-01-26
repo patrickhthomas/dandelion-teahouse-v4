@@ -32,17 +32,16 @@ export default function WishBoxPage({ data }) {
     <h3>Dandelion Teahouse &#38; Apothecary</h3>
     <h1>{data?.shopifyCollection?.title}</h1>
         <div className={offerSection}>
-        
         <p>{data?.shopifyCollection?.description}</p> 
               <StaticImage
               alt='image coming soon'
               src='../images/wishBox.jpg'
-              loading="lazy"
             />
         </div>
+    <strong>Wish box orders must be placed on a separate transaction. If you'd like to purchase other items, come back after you've made your Wish Box order!</strong>
    <PrimaryButton 
-    buttonText='Click here to learn more about our Wish Box' 
-    destination='https://dandelion-teahouse-apothecary.myshopify.com/products/the-wish-box-february'
+    buttonText='Click here to order your Wish Box' 
+    destination='https://dandelion-teahouse-apothecary.myshopify.com/collections/the-wish-box'
     />
     </div>
 

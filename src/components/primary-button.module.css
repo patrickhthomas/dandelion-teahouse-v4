@@ -8,7 +8,7 @@
   color: var(--text-color);
   cursor: pointer;
   text-decoration: none;
-  height: var(--size-input);
+  height: auto;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;

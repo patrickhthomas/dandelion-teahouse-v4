@@ -171,7 +171,6 @@
     display: flex;
     flex-flow: column nowrap;
     padding-bottom: 2em;
-    grid-gap: .5em;
 }
 
 @media (min-width: 640px) {
