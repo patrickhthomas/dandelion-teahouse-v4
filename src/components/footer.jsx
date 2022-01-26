@@ -25,9 +25,6 @@ export function Footer() {
               Gifts from the Earth
             </a>
           </li>
-          <li className={footerNavListItem}>
-            <a href="https://www.gatsbyjs.com/cloud/">About Gatsby Cloud</a>
-          </li>
         </ul>
       </nav>
       <div className={copyright}>

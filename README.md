@@ -1,51 +1,13 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://www.dandelionteahouse.com">
+    <img alt="Gatsby" src="" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby Starter Shopify
+  DandelionTeahouse.Com
 </h1>
 
-Kick off your next [Shopify](https://www.shopify.com/) project with this boilerplate. This starter creates a store with a custom landing page, individual filtered views for each product, detailed product pages, advanced instant search and a shopping cart. All styled with CSS Modules.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.png" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-shopify)
-
-Check out the [demo site](https://shopify-demo.gatsbyjs.com) showcasing a proof-of-concept with 10k products and 30k variants.
-
-## 🚀 Quick start
-
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the Shopify starter.
-
-    ```shell
-    # create a new Gatsby site using the Shopify starter
-    npx gatsby new my-shopify-store https://github.com/gatsbyjs/gatsby-starter-shopify
-    ```
-
-2.  **Link to your store**
-
-    Follow these instructions here to [link your Shopify store](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-shopify#readme). Create a `.env` file with your Shopify store URL, password, and Storefront access token, using the `.env.example` file as an example. If you want to try with a development store, see [the sample data and instructions here](example/).
-
-3.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-shopify-starter/
-    npm start
-    ```
-
-4.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-shopify-starter` directory in your code editor of choice and edit `src/pages/index.jsx`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 
@@ -108,16 +70,3 @@ The site uses [CSS Modules](https://github.com/css-modules/css-modules) for styl
 The `/search` page uses server-side rendering to show a list of products based on filters and search terms in the URL query parameters.
 
 
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
