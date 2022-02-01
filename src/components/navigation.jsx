@@ -2,7 +2,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import * as React from "react"
 import slugify from "@sindresorhus/slugify"
 import { navStyle, navLink, activeLink, wishBox, activeWishBox } from "./navigation.module.css"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+
 
 export function Navigation({ className }) {
   const data= useStaticQuery(graphql`
