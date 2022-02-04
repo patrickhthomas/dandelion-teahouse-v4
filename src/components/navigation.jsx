@@ -50,6 +50,13 @@ export function Navigation({ className }) {
       :
       <></>
       ))}
+      <Link
+      className={wishBox}
+      to={`/events`}
+      activeClassName={activeWishBox}
+      >
+      Events
+      </Link>
       </nav>
       )
     }

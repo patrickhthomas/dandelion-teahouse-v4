@@ -5,9 +5,12 @@ import { HomePage } from "../components/home-page"
 import { ProductListingLimit } from "../components/product-listing"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import {
- dateTimeContainer,
- listItem,
- list,
+  dateTimeContainer,
+  listItem,
+  summaryContainer,
+  linkContainer,
+  eventsContainer,
+  list,
   container,
   intro,
   tagline,
@@ -40,34 +43,40 @@ query MyCalendarQuery {
 const toDateString = Date();
 
 export default function EventsPage({ data }) {
-
+  
   return (
     <Layout>
-<ul className={list}>
+      <div className={eventsContainer}>
+        <h1>Upcoming events</h1>
+    <ul className={list}>
     {data.calendar.children.map((event, index) => (
-        <li
-        key={index} className={listItem}>
-           
-            <div className={dateTimeContainer}>
-            <h2>{event.start.dateTime.slice(5,7)}/{event.start.dateTime.slice(8, 10)}</h2>
+      <li
+      key={index} className={listItem}>
+      
+      <div className={dateTimeContainer}>
 
-            {(parseInt(event.start.dateTime.slice(11,13))) > 12 ? 
-            <h3>
-            {(parseInt(event.start.dateTime.slice(11,13)) - 12)}{event.start.dateTime.slice(13,16)}PM
-            </h3> : 
-            <h3>
-            {parseInt(event.start.dateTime.slice(11,13))}{event.start.dateTime.slice(13,16)}AM
-            </h3>
-}
-</div>
-            <h3>{event.summary}</h3>
-            {event.description.slice(0,4) == 'http' ?
-            <OutboundLink  href={event.description}
-    >More Details/Tickets</OutboundLink> : <></>}
+      <h2>{event.start.dateTime.slice(5,7)}/{event.start.dateTime.slice(8, 10)}</h2>
+
+      {(parseInt(event.start.dateTime.slice(11,13))) > 12 ? 
+        <h3>
+        {(parseInt(event.start.dateTime.slice(11,13)) - 12)}{event.start.dateTime.slice(13,16)}PM
+        </h3> : 
+        <h3>
+        {parseInt(event.start.dateTime.slice(11,13))}{event.start.dateTime.slice(13,16)}AM
+        </h3>
+      }
+
             
-        </li>
+      </div>
+      <h3 className={summaryContainer}>{event.summary}</h3>
+      <OutboundLink className={linkContainer} href={event.description}
+      >More Details/Tickets</OutboundLink>
+      
+      </li>
       ))}
-    </ul>
-    </Layout>
-  )
-}
+      </ul>
+      </div>
+      </Layout>
+      )
+    }
+    

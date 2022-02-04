@@ -1,41 +1,13 @@
-.container {
-  padding-left: var(--size-gutter-raw);
-  padding-right: var(--size-gutter-raw);
-  padding-top: var(--space-lg);
-  padding-bottom: var(--space-3xl);
-  max-width: 76ch;
-}
 
-.intro {
-  line-height: var(--dense);
-  font-size: var(--text-display);
-  color: var(--text-color-secondary);
-}
 
-.callOut {
-  padding-bottom: var(--space-lg);
-  font-size: var(--text-display);
-  font-weight: var(--bold);
-  line-height: var(--dense);
-  line-height: var(--dense);
-  letter-spacing: var(--tight);
-  color: var(--text-color-secondary);
-}
-
-.callOut > strong {
-  text-decoration: underline;
-}
-
-.callToAction {
-  font-size: var(--text-prose);
-  line-height: var(--dense);
-  line-height: var(--dense);
-  letter-spacing: var(--tight);
-  color: var(--text-color-secondary);
-}
-
-.deployButton {
-  margin-top: var(--space-lg);
+.eventsContainer {
+      display: flex;
+      flex-flow: column nowrap;
+      grid-gap: 1em;
+      align-items: start;
+      z-index: 1;
+      padding: 0 var(--size-gutter-raw);
+      width: 100%;
 }
 
 .list {
@@ -43,20 +15,80 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto repeat(auto);
+  grid-gap: 1em;
 }
 
 .listItem {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
+  justify-content: stretch;
+  align-items: stretch;
   width: 100%;
+  background-color: var(--white);
+  border-radius: .2em;
+  overflow: hidden;
 }
 
 
 .dateTimeContainer {
   display: flex;
-  flex-flow: row nowrap;
+  flex: 1;
+  flex-flow: column nowrap;
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 1em;
 }
 
-.dateTimeContainer h2 h3 {
-  width: 100px;
+.summaryContainer {
+    flex: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--off-white-purple);
+  padding: 1em;
+}
+
+.linkContainer {
+    flex: 1 0 300px;
+    text-align: center;
+    border: 2px solid var(--off-white-purple);
+  display: flex;
+  flex-flow: column nowrap;
+  place-content: center;
+  background: var(--rainbow-animate);
+  background-position: 0px;
+  padding: 1em;
+  transition: ease-in all .2s;
+  color: var(--white);
+}
+
+.linkContainer:hover {
+    background-position: 7em;
+    transition: all .2s ease-out;
+    font-weight:900;
+  
+}
+
+.dateTimeContainer h2,
+.dateTimeContainer h3 {
+  width: 100%;
+}
+
+@media (min-width: 540px) {
+.listItem {
+  display: grid;
+  grid-template-columns: 10em 1fr 10em;
+  grid-template-rows: auto;
+  grid-gap: .5em;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: .2em;
+  overflow: hidden;
+}
+
+.linkContainer:hover {
+  background-position: 9em;
+  transition: all .5s ease-out;
+  font-weight: 900;
+
+}
 }

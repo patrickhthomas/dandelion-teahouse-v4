@@ -31,6 +31,7 @@ import {
   aboutContainer,
   aboutSection,
   offerSection,
+  homePageHeader2,
   logo as logoCss,
   searchButton,
   nav,
@@ -65,7 +66,7 @@ export function HomePage({ data }) {
       </div>
       </div>
       <div className={locationHoursContainer}>
-        <h2>Hours &#38; Location</h2>
+        <h2 className={homePageHeader2}>Hours &#38; Location</h2>
       <div className={locationHoursFlexbox}>
         <div className={locationContainer}>
           <a target="_blank" rel="noopener noreferrer" href='https://goo.gl/maps/biekmuwE3pK9kq4o7'>
@@ -107,7 +108,7 @@ export function HomePage({ data }) {
       </div>
       </div>
       <div className={aboutContainer}>
-        <h2>What we offer</h2>
+        <h2 className={homePageHeader2}>What we offer</h2>
         <div className={offerSection}>
         <h3>The Teahouse</h3>
         
@@ -130,7 +131,7 @@ export function HomePage({ data }) {
         </div>
       </div>
       <div className={aboutContainer}>
-        <h2>Our Story</h2>
+        <h2 className={homePageHeader2}>Our Story</h2>
         <h3>How it started</h3>
         <div className={aboutSection}>
         <p>Dandelion Teahouse owner Marianne Wilson Stein was born and raised in the Pacific Northwest and moved to Vancouver with her husband Steve in 1991 to start their family. Marianne became interested in all things holistic after her first daughter, Kat (the teahouse manager!) was born in 1992 - she wanted to give her daughter a good, healthy start in life. She began immersing herself in books about gardening, herbal remedies, and holistic medicine, and one year decided to make a few skincare goodies as Christmas gifts with her naturopath friend, Peggy. She enjoyed it so much that she dove into the art of skincare even more! As time went on, Marianne learned that she had a knack for making lotions and “potions,” and Gifts From the Earth was born.</p> 
