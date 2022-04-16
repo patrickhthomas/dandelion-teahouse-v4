@@ -43,33 +43,33 @@ query MyCalendarQuery {
 const toDateString = Date();
 
 export default function EventsPage({ data }) {
-  
+
+
   return (
     <Layout>
       <div className={eventsContainer}>
         <h1>Upcoming events</h1>
     <ul className={list}>
-    {data.calendar.children.map((event, index) => (
+    {data.calendar.children.map((listing, index) => (
       <li
       key={index} className={listItem}>
       
       <div className={dateTimeContainer}>
 
-      <h2>{event.start.dateTime.slice(5,7)}/{event.start.dateTime.slice(8, 10)}</h2>
+      <h2>{listing.start.dateTime.slice(5,7)}/{listing.start.dateTime.slice(8, 10)}</h2>
 
-      {(parseInt(event.start.dateTime.slice(11,13))) > 12 ? 
+      {(parseInt(listing.start.dateTime.slice(11,13))) > 12 ? 
         <h3>
-        {(parseInt(event.start.dateTime.slice(11,13)) - 12)}{event.start.dateTime.slice(13,16)}PM
+        {(parseInt(listing.start.dateTime.slice(11,13)) - 12)}{listing.start.dateTime.slice(13,16)}PM
         </h3> : 
         <h3>
-        {parseInt(event.start.dateTime.slice(11,13))}{event.start.dateTime.slice(13,16)}AM
+        {parseInt(listing.start.dateTime.slice(11,13))}{listing.start.dateTime.slice(13,16)}AM
         </h3>
       }
-
             
       </div>
-      <h3 className={summaryContainer}>{event.summary}</h3>
-      <OutboundLink className={linkContainer} href={event.description}
+      <h3 className={summaryContainer}>{listing.summary}</h3>
+      <OutboundLink href={listing.description.replace(/(<([^>]+)>)/gi, "")} className={linkContainer} target="_blank" 
       >More Details/Tickets</OutboundLink>
       
       </li>
