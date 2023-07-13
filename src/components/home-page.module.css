@@ -28,7 +28,7 @@
         'e';
         grid-auto-rows: auto;
         align-items: start;
-        grid-gap: 2em;
+        grid-gap: 4em;
         z-index: 1;
         top: 0;
 }
