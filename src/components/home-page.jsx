@@ -60,7 +60,7 @@ export function HomePage({ data }) {
         
       </div>
       <div className={blurbContainer}>
-      <p className={heroBlurb}>We are a modern apothecary and teahouse located in downtown Vancouver, WA. Our shop features unique teas from all over the world, tea lattes, handcrafted herbal tisane blends, loose herbs, natural small batch skincare products made on-site by Gifts From the Earth, a rotating selection of art by local artists, and so much more. We are proud to be a women owned, inclusive company!</p>
+      <p className={heroBlurb}>* Online ordering is currently unavailable. If you'd like to place an order online, please email us at kat@dandelionteahouse.com! </br></br>We are a modern apothecary and teahouse located in downtown Vancouver, WA. Our shop features unique teas from all over the world, tea lattes, handcrafted herbal tisane blends, loose herbs, natural small batch skincare products made on-site by Gifts From the Earth, a rotating selection of art by local artists, and so much more. We are proud to be a women owned, inclusive company!</p>
       <div className={iconContainer}>
         <WomanOwned className={iconB}/> <InclusiveCompany className={iconC}/>
       </div>
